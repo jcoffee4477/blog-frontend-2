@@ -9,7 +9,7 @@
              <h2>{post.title}</h2>
              <img src={post.image} />
              <p>body: {post.body}</p>
-             <button onClick={() => props.onShowPost(post)}>More Info</button>
+             <button onClick={() => props.onShowPost(post)}>Edit Post</button>
            </div>
            
          ))}

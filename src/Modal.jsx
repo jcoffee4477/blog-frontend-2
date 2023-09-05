@@ -10,6 +10,7 @@ export function Modal(props) {
             &#x2715;
           </button>
         </section>
+        
       </div>
     );
   }
