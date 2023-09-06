@@ -7,6 +7,8 @@ import { PostsShow } from "./PostsShow"
 import { Signup } from "./Signup"
 import { Login } from "./Login"
 import { LogoutLink } from "./LogoutLink"
+import { Routes, Route } from "react-router-dom";
+import { About } from "./About";
 
 export function Content() {
 
@@ -72,10 +74,16 @@ const [currentPost, setCurrentPost] = useState({})
   return (
     <div>
       <h1>Welcome to React!</h1>
+      <Routes>
+      <Route path="/about" element={<About />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<LogoutLink />}  />
+    </Routes>
 
-      <LogoutLink />
-      <Login />
-      <Signup />
+      
+      
+      
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
